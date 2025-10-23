@@ -1,1 +1,441 @@
-/* место для вашего кода */
+/*вся шапка*/
+header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 92px 50px;
+}
+
+/*контейнер навигации*/
+.header__menu {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+/*список ссылок*/
+.header__links-list {
+  display: flex;
+  gap: 32px; /* расстояние между пунктами вместе с кружочком*/
+  list-style-type: circle;
+}
+
+/*каждый пункт в списке*/
+.header__links-list-item {
+  list-style-type: circle;
+}
+
+/*чтоб сделать ссылку без кружочка*/
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+
+/*каждая ссылка в пункте списка*/
+.header__link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/*выбранная ссылка меню (без подчёркивания)*/
+.header__link_active {
+  text-decoration: none;
+}
+
+/*контейнер логотипа*/
+.header__logo {
+  display: block;
+}
+
+/*картинка с логотипом*/
+.header__logo-image {
+  width: 148px;
+}
+
+/*общий класс для блока с адресом (переиспользуется в шапке и подвале)*/
+address {
+  display: flex;
+  flex-direction: column;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24.3px;
+}
+
+/*Немного увеличиваю расстояние от линии подчеркивания элементов "a"*/
+.address-border {
+  text-underline-offset: 4px;
+}
+
+/*для выравнивания блока с адресом. в футере используется другое выравнивание*/
+.header__address {
+  justify-self: end;
+  align-items: flex-start;
+  max-width: 240px;
+}
+
+/*вся секция*/
+.cover {
+  position: relative; /*Чтобы абсолютное позиционирование работало правильно*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 757px;
+  padding: 165px 50px 50px 50px;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*полупрозрачный блок поверх секции*/
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Контент секции — поверх оверлея */
+.cover__title,
+.cover__description {
+  position: relative;
+  z-index: 2;
+}
+
+/*заголовок*/
+.cover__title {
+  z-index: 2;
+  color: #fff;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 100px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/*для превращения строк заголовка в блочный элемент*/
+.aligned-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/*классы для выравнивания строк текста*/
+.aligned-text_left {
+  text-align: left;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+/*класс для управления межбуквенным расстоянием в местах, где есть эти акценты*/
+.letter-spacing-extended {
+  letter-spacing: 30px;
+}
+
+/*класс для обнуления общего межбуквенного расстояния у последней буквы*/
+.no-letter-spacing {
+  letter-spacing: 0px;
+}
+
+/*контейнер для подзаголовка и кнопки*/
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*текст подзаголовка*/
+.cover__description-text {
+  color: #fff;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  word-spacing: 19px;
+}
+
+/*кнопка «Сделать ставку»*/
+.bet-button {
+  border: 1px solid white;
+  padding: 14px 32px;
+  color: #fff;
+  font-family: Raleway;
+  font-weight: 500; /*В font.css добавила новую ширину*/
+  font-size: 22px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+}
+
+/*вся секция*/
+.lots {
+  margin-top: 180px;
+  padding: 0px 24px;
+  /* box-sizing: border-box; */
+}
+
+/*заголовок секции*/
+.lots__heading {
+  margin-left: 40px;
+  color: black;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+/*список карточек*/
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 30px 0;
+  list-style-type: none;
+}
+
+/*пункт списка карточек*/
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+}
+
+/*ссылка, обрамляющая карточку*/
+.card-link {
+  text-decoration: none;
+}
+
+/*карточка*/
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 48px 40px;
+}
+
+/*чтоб overlay работал*/
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 2;
+}
+
+/*классы для фона каждой из карточек*/
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*заголовок карточки*/
+.card__title {
+  color: #fff;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 120%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-transform: uppercase;
+}
+
+/*текст карточки*/
+.card__text {
+  color: #fff;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+/*ссылка «Посмотреть больше»*/
+.lots__look-more-link {
+  margin-top: 30px;
+  margin-left: 40px;
+  color: black;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+
+/*вся секция*/
+.about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  align-items: start;
+  column-gap: 72px;
+  box-sizing: border-box;
+  margin-top: 120px;
+  padding: 0 24px;
+}
+
+/*класс для колонок*/
+.about__column {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/*контейнер с логотипом*/
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;  
+  margin-top: 35px;
+  margin-inline: auto;
+  border-radius: 50%;
+  background-color: black;
+  background-color: #000;
+}
+
+/*изображение логотипа*/
+.about__logo-image {
+  display: block;
+  width: 148px;
+  height: auto;
+}
+
+/*заголовок секции*/
+.about__title {
+  margin-top: 133px;
+  color: black;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+/*блок для текстов (параграфов) секции*/
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+
+
+
+/*весь подвал*/
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;                 
+  box-sizing: border-box;               
+  margin-top: 180px;
+  padding: 0 50px 82px;
+}
+
+/*для выравнивания блока с адресом*/
+.footer__address {
+  justify-self: start;
+  align-items: flex-start;
+} 
+
+/*блок навигации по списку ссылок. Рекомендуем вложить список в тег <nav> с этим классом*/
+.footer__menu {
+  justify-self: center;
+}
+
+/*список пунктов меню*/
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none; 
+}
+
+/*пункт списка меню*/
+.footer__menu-list-item {
+  cursor: pointer;
+}
+
+/*каждая ссылка в пункте списка*/
+.footer__menu-link {
+  color: #000;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/*выбранная ссылка меню (без подчёркивания)*/
+.footer__menu-link_active {
+  text-decoration: none; 
+}
+
+/*список ссылок на социальные сети. Можно не добавлять тег <nav>, потому что ссылки ведут на внешние ресурсы;*/
+.footer__social-list {
+  display: flex;
+  justify-self: end;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+  list-style: none;    
+}
+
+/*пункт списка ссылок на социальные сети*/
+.footer__social-list-item {
+  cursor: pointer;
+}
+
+/*ссылка на социальные сети*/
+.footer__social-link {
+  display: inline-block;
+}
+
+/*иконка социальной сети*/
+.footer__social-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
