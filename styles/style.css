@@ -294,8 +294,6 @@ address {
   text-underline-offset: 3px;
 }
 
-
-
 /*вся секция*/
 .about {
   display: grid;
@@ -356,9 +354,6 @@ address {
   font-size: 20px;
   line-height: 24px;
 }
-
-
-
 
 /*весь подвал*/
 footer {
