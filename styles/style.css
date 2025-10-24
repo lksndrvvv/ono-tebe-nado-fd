@@ -1,16 +1,16 @@
 /*вся шапка*/
-header {
+.header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   grid-template-rows: 1fr;
   align-items: center;
   box-sizing: border-box;
-  padding: 92px 50px;
+  padding: 98px 50px 92px 50px;
 }
 
 /*контейнер навигации*/
 .header__menu {
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
@@ -19,7 +19,7 @@ header {
 /*список ссылок*/
 .header__links-list {
   display: flex;
-  gap: 32px; /* расстояние между пунктами вместе с кружочком*/
+  gap: 33px; /* расстояние между пунктами вместе с кружочком*/
   list-style-type: circle;
 }
 
@@ -51,14 +51,14 @@ header {
 
 /*картинка с логотипом*/
 .header__logo-image {
-  width: 148px;
+  width: 140px;
 }
 
 /*общий класс для блока с адресом (переиспользуется в шапке и подвале)*/
-address {
+.address {
   display: flex;
   flex-direction: column;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -112,7 +112,7 @@ address {
 .cover__title {
   z-index: 2;
   color: #fff;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 700;
   font-size: 100px;
   letter-spacing: 0;
@@ -159,7 +159,7 @@ address {
 /*текст подзаголовка*/
 .cover__description-text {
   color: #fff;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 28px;
@@ -172,7 +172,7 @@ address {
   border: 1px solid white;
   padding: 14px 32px;
   color: #fff;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 500; /*В font.css добавила новую ширину*/
   font-size: 22px;
   line-height: 100%;
@@ -184,7 +184,7 @@ address {
 
 /*вся секция*/
 .lots {
-  margin-top: 180px;
+  margin-top: 182px;
   padding: 0px 24px;
   /* box-sizing: border-box; */
 }
@@ -193,11 +193,10 @@ address {
 .lots__heading {
   margin-left: 40px;
   color: black;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 100%;
-  letter-spacing: 0%;
   text-transform: uppercase;
 }
 
@@ -229,6 +228,9 @@ address {
   justify-content: space-between;
   height: 100%;
   padding: 48px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /*чтоб overlay работал*/
@@ -241,29 +243,21 @@ address {
 /*классы для фона каждой из карточек*/
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 /*заголовок карточки*/
 .card__title {
   color: #fff;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 700;
   font-size: 22px;
   line-height: 120%;
@@ -275,7 +269,7 @@ address {
 /*текст карточки*/
 .card__text {
   color: #fff;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
@@ -283,10 +277,10 @@ address {
 
 /*ссылка «Посмотреть больше»*/
 .lots__look-more-link {
-  margin-top: 30px;
+  margin-top: 32px;
   margin-left: 40px;
   color: black;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 100%;
@@ -299,7 +293,7 @@ address {
   display: grid;
   grid-template-columns: 334px 1fr;
   align-items: start;
-  column-gap: 72px;
+  column-gap: 28px; /*постаралась один в один сохранить отступы, но почему-то в макете предлог "на" находится на следующей строчке, что разрывом <br> было бы нецелесообразно исправлять, поэтому есть небольшое отличие с оригиналом*/
   box-sizing: border-box;
   margin-top: 120px;
   padding: 0 24px;
@@ -310,6 +304,7 @@ address {
   display: flex;
   flex-direction: column;
   gap: 100px;
+  margin-top: 146px;
 }
 
 /*контейнер с логотипом*/
@@ -334,9 +329,8 @@ address {
 
 /*заголовок секции*/
 .about__title {
-  margin-top: 133px;
   color: black;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 100%;
@@ -348,19 +342,19 @@ address {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
 }
 
 /*весь подвал*/
-footer {
+.footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
   box-sizing: border-box;
-  margin-top: 180px;
+  margin-top: 182px;
   padding: 0 50px 82px;
 }
 
@@ -373,6 +367,7 @@ footer {
 /*блок навигации по списку ссылок. Рекомендуем вложить список в тег <nav> с этим классом*/
 .footer__menu {
   justify-self: center;
+  margin-top: 4px;
 }
 
 /*список пунктов меню*/
@@ -383,6 +378,7 @@ footer {
   margin: 0;
   padding: 0;
   list-style: none;
+  gap: 2px;
 }
 
 /*пункт списка меню*/
@@ -393,7 +389,7 @@ footer {
 /*каждая ссылка в пункте списка*/
 .footer__menu-link {
   color: #000;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
